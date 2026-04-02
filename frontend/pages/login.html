@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="login-page">
+    <div class="container">
+        <div class="left-panel">
+
+        </div>
+
+        <form class="right-panel" method="post" id="login-form" action="/login">
+            <h1>WELCOME BACK</h1>
+            <h3>Welcome back! Please enter your details.</h3>
+
+            <div class="email">
+                <input type="email" id="email" placeholder="Email" name="email" required />
+            </div>
+
+            <div class="password">
+                <input type="password" id="password" placeholder="Enter your password" name="password" required />
+                <i class="fa-solid fa-eye" id="togglePassword"></i>
+            </div>
+
+            <div class="remember-forgotPass">
+                <div class="remember">
+                    <label><input type="checkbox" required/>Remember me</label>
+                </div>
+
+                <div class="forgot-password">
+                    <a href="#">Forgot password?</a>
+                </div>
+            </div>
+
+            <div class="btn">
+                <button class="login-btn" type="submit">Login</button>
+            </div>
+
+            <div class="social-btn">
+                <button class="google-btn" type="button">
+                    <img src="../assets/icons/Google.svg"/>
+                    Sign in with Google
+                </button>
+            </div>
+
+            <div class="signup-redirect">
+                <p>Don't have an account? <a href="../pages/signup.html">Sign up free!</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

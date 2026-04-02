@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="signup-page">
+    <div class="container">
+        <div class="left-panel">
+            <img src="../assets/images/mountain.jpg" alt="">
+        </div>
+
+        <form class="right-panel" id="signupForm" method="post">
+
+            <h1>Create an account</h1>
+            <p class="para">Already have an account? <a href="../pages/login.html">Login</a></p>
+
+            <div class="name">
+                <input type="text" id="firstName" placeholder="First name" name="firstName" required>
+                <input type="text" id="lastName" placeholder="Last name" name = "lastName">
+            </div>
+
+            <div class="email">
+                <input type="email" id="email" placeholder="Email" name = "email" required>
+            </div>
+
+            <div class="password">
+                <input type="password" id="password" placeholder="Create password" name="password" required>
+                <i class="fa-solid fa-eye togglePassword"></i>
+            </div>
+
+            <div id="passwordStrength"></div>
+
+            <div class="password">
+                <input type="password" id="confirmPassword" placeholder="Confirm password" name="confirmPassword" required>
+                <i class="fa-solid fa-eye togglePassword"></i>
+            </div>
+
+            <div class="terms-and-conditions">
+                <label><input type="checkbox" id="terms" required>I agree to the <a href="#">Terms & Conditions</a></label>
+            </div>
+
+            <div class="btn">
+                <button id="submitBtn" type="submit">Create account</button>
+            </div>
+
+            <div class="or-para">Or register with</div>
+
+            <div class="social-btn">
+                    <button type="button" class="google-btn">
+                        <img src="../assets/icons/Google.svg" alt="">
+                        Google
+                    </button>
+                    <button type="button" class="apple-btn">
+                        <img src="../assets/icons/Apple_logo_white.svg" alt="">
+                        Apple
+                    </button>
+            </div>
+        </form>
+
+    </div>
+
+    <div id="toast"></div>
+</body>
+<script src="../js/script.js"></script>
+</html>
