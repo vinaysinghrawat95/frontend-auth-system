@@ -1,4 +1,4 @@
-// SIGNUP JS
+/* ================ SIGNUP JS ==================*/
 
 const form = document.querySelector("#signupForm");
 const firstName = document.querySelector("#firstName");
@@ -92,7 +92,7 @@ const toggleStateCheck = (icon) => {
             input.type = "password";
             icon.classList.replace("fa-eye-slash", "fa-eye");
         }
-    }
+}
 
 
 
@@ -181,5 +181,4 @@ const showToast = (message, type = "success") => {
         toast.classList.remove("show", "error");
     }, 3000);
 };
-
 

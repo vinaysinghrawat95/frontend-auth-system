@@ -291,10 +291,10 @@ body{
     padding: 12px;
     margin: 43px 0 9px 42px;
     width: 80%;
-    border: none;
+    border: 2px solid #4a4e69;
     border-radius: 12px;
     outline: none;
-    background-color: #00b4d8;
+    background-color: #2A2638;
     color: white;
 
 }
@@ -302,7 +302,7 @@ body{
 
 .login-page .email input:focus,
 .login-page .password input:focus  {
-    border: 2px solid #023e8a;
+    border: 2px solid #9d4edd;
 }
 
 .login-page .password {
@@ -313,10 +313,10 @@ body{
     padding: 12px 32px 12px 12px;
     margin: 6px 0 11px 42px;
     width: 80%;
-    border: none;
+    border: 2px solid #4a4e69;
+    background-color: #2A2638;
     border-radius: 12px;
     outline: none;
-    background-color: #00b4d8;
     color: #e9ecef;
 }
 
@@ -332,6 +332,10 @@ body{
     cursor: pointer;
 }
 
+.login-page .togglePassword{
+    color: white;
+}
+
 .login-page .remember-forgotPass {
     display: flex;
     justify-content: space-around;
@@ -340,10 +344,12 @@ body{
     color: #e9ecef;
 }
 
-
+.login-page .forgot-password a{
+    color: #a63eed;
+}
 
 .login-page .remember input {
-    margin: 0 6px 0 0;
+    margin: 0 6px 0 4px;
     height: 17px;
     width: 17px;
 }
@@ -369,7 +375,7 @@ body{
 
 
 .login-page .login-btn {
-    margin: 12px 0 2px 42px;
+    margin: 20px 0 2px 42px;
     padding: 12px;
     width: 80%;
 }
@@ -378,17 +384,17 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 4px 0 12px 42px;
+    margin: 10px 0 12px 42px;
     background: transparent;
     gap: 10px;
     padding: 6px 20px;
     width: 80%;
-    border: 1px solid white;
+    border: 1px solid #2A2638;
 }
 
 .login-page .google-btn img {
     height: 30px;
-    width: 30px;
+    width: 25px;
 }
 
 .login-page .signup-redirect {
@@ -398,7 +404,10 @@ body{
 }
 
 .login-page .signup-redirect a {
-    color:blue;
+    color:#a63eed;
     text-decoration: none;
+}
 
+.login-page .signup-redirect p{
+    color: #e9ecef;
 }
