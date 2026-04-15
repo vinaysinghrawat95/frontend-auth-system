@@ -2,13 +2,17 @@ const userId = document.querySelector("#userId");
 const usernameGreet = document.querySelector("#usernameGreet");
 const usernameCard = document.querySelector("#usernameCard");
 const email = document.querySelector("#email");
+const logoutBtn = document.querySelector(".logout-btn");
+const logoutPopup = document.querySelector(".logout-popup");
+const noLogoutBtn = document.querySelector("#no-btn");
+const yesLogoutBtn = document.querySelector("#yes-btn");
+const overlay = document.querySelector(".overlay");
 
 const fun = async () => {
 
     const token = localStorage.getItem("token");
 
-    if(!token){
-        
+    if (!token) {
         window.location.href = "login.html";
         return;
     }
@@ -18,14 +22,14 @@ const fun = async () => {
             {
                 method: "GET",
                 headers: {
-                    "Authorization": "Bearer "+ token
+                    "Authorization": "Bearer " + token
                 }
             }
         );
 
         const data = await response.json();
 
-        if(!response.ok){
+        if (!response.ok) {
             localStorage.removeItem("token");
             window.location.href = "login.html";
             return;
@@ -36,17 +40,29 @@ const fun = async () => {
         usernameGreet.textContent = data.username;
         email.textContent = data.email;
 
-        console.log(data);  
-    }catch(e){
+    } catch (e) {
         console.error(e);
-        
+
     }
 
 };
 
-document.addEventListener("DOMContentLoaded", ()=> {
-    console.log(localStorage.getItem("token"));
-    
+document.addEventListener("DOMContentLoaded", () => {
     fun();
+});
+
+logoutBtn.addEventListener("click", () => {
+    logoutPopup.classList.add("show");
+    overlay.classList.add("show");
+});
+
+yesLogoutBtn.addEventListener("click", () => {
+    localStorage.removeItem("token");
+    window.location.href = "login.html";
+});
+
+noLogoutBtn.addEventListener("click", () => {
+    logoutPopup.classList.remove("show");
+    overlay.classList.remove("show");
 });
 
